@@ -9,26 +9,23 @@
 </head>
 
 <body>
+
     <div class="nav">
-        <div class="wrap">
-            <div class="logo"></div>
-            <div class="textLogo">
-                <h1>onet Sport w TV</h1>
-            </div>
-        </div>
+        <div class="logo"></div>
         <div class="input"><input type="search" name="" id="in" placeholder="🔎  "></div>
-
-
     </div>
+
     <div class="container">
-        <%resources.forEach(resource=>{%>
+        <%resources.sort((a,b)=>a.image-b.image).forEach(resource=>{%>
         <div class="item">
-            <a target="_blank"
-                href=<%='https://programtv.onet.pl'+resource.titleURL%>><%=resource.time%><%=resource.title%></a>
+            <img src="<%=resource.image%>" alt="kot" width="">
+            <a target="_blank" href=<%=resource.titleURL%>><%=resource.title%>
+            </a>
+
         </div>
         <%})%>
     </div>
-   <script src="js/scrypt.js"></script>
+    <script src="js/scrypt.js"></script>
 </body>
 
 </html>

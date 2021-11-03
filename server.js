@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 }))
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs')
-const URL = 'https://programtv.onet.pl/kategoria/sport'
+const URL = 'https://www.netflix.com/pl/browse/genre/83'
 
 axios(URL)
     .then(res => {
@@ -21,16 +21,16 @@ axios(URL)
         const $ = cheerio.load(htmlData)
 
 
-        const listItems = $("li");
-
+        const listItems = $('.nm-content-horizontal-row-item');
+        
         listItems.each(function (idx, el) {
-            const time = $(el).children('.hours').text()
-            const title = $(el).children('.titles').text()
-            const titleURL = $(el).children('.titles').children('a').attr('href')
+            const image = $(el).children('a').children('.nm-collections-title-img').attr('src')
+            const title = $(el).children('a').children('.nm-collections-title-name').text()
+            const titleURL = $(el).children('.nm-collections-link').attr('href')
            
-            if(time&&title&&titleURL){
+            if(image.includes('data')==false&&title&&titleURL){
                 articles.push({
-                    time,
+                    image,
                     title,
                     titleURL
                 })

@@ -1,65 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-body{
-    background-color: hsl(42, 100%, 70%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     font-family: 'Poppins', sans-serif;
     padding: 0 10px;
 
 }
-.nav{
+
+.nav {
     width: 100%;
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-    background:hsl(105, 55%, 96%);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    background: black;
     margin-bottom: 15px;
+    position: fixed;
 }
-.wrap{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-.logo{
+
+
+.logo {
     text-align: center;
-    width: 40px;
-    height: 40px;
-    background-image: url('https://ocdn.eu/ucs/static/programtv/57db03739d60668e82beb1bceb6d7b39/onet_logo.png');
+    width: 200px;
+    height: 90px;
+    background-image: url('https://media.mcetv.fr/wp-content/uploads/2019/02/ap_18193545308863-980d5f0ba425601f3fab69e2b9c2dca31562b75e-s800-c85.jpg');
     background-size: cover;
-    margin:0 15px;
+    margin: 0 15px;
 }
-.textLogo{
+
+.textLogo {
     text-align: center;
 }
-.input{
-    margin:0 15px;
+
+.input {
+    margin: 0 15px;
 }
-.input input{
+
+.input input {
     font-size: 1.3rem;
     padding: 10px;
     border-radius: 5px;
-    pa
+    background-color: brown;
+    border: none;
+    color: white;
 }
 
+.container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.item{
-    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-    background-color: aliceblue;
-    margin-bottom: 15px;
+.item {
+    width: 25%;
+    height: 35vh;
+    border: 1px solid white;
+    background-color: black;
+    gap: 5px;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
-a{
+
+a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.3rem;
 }
-.item:hover{
-   
-    background-color: hsl(153, 100%, 82%);
-    
+
+.item:hover {
+
+    background-color:gray;
+
 }
