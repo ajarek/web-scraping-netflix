@@ -28,7 +28,7 @@ axios(URL)
             const title = $(el).children('a').children('.nm-collections-title-name').text()
             const titleURL = $(el).children('.nm-collections-link').attr('href')
            
-            if(image.includes('data')==false&&title&&titleURL){
+            if(/^https/.test(image)&&title&&titleURL){
                 articles.push({
                     image,
                     title,
